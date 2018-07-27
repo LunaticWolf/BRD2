@@ -1,0 +1,92 @@
+<html> 
+	<head> 
+		<title> Nav-Bar </title>
+
+
+    		<meta charset="utf-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+           <link rel="stylesheet" type="text/css" href="Static.css">
+
+ 
+	</head>
+
+
+<body id="navbackground">
+	<nav  class="navbar navbar-inverse">
+		<div class="container-fluid" >
+			<div class="navbar-header">
+				<a class="navbar-brand active" href="NavBar.html"> N-Data </a>
+			</div>
+		<div> 
+
+			<ul class="nav navbar-nav"> 
+				<li> <a href="CustomerController?theCommand=New"> New </a></li>
+				<li class="dropdown"> 
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown"> View
+				 			<span class="caret"></span>
+					  </a>				
+						
+	              	<ul class="dropdown-menu">
+                    		<li> <a href="CustomerController?theCommand=Singleview"> Single record View </a> </li>
+                    		<li> <a href="CustomerController?theCommand=Viewall">  Multi - records View </a> </li>
+                  	</ul> 
+
+				</li>
+				<li> <a href="CustomerController?theCommand=Update"> Update </a></li>
+				<li> <a href="CustomerController?theCommand=Delete"> Delete </a></li>
+				<ul class="nav navbar-nav navbar-right">
+     
+                       <li><a href="LoginController"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+              </ul>
+		</div>
+	</div>
+
+
+
+	<c:forEach items="${customer}" var="customer">
+
+    <table border=1>
+        <thead>
+            <tr>
+                <th>customerCode</th>
+                <th>customerName</th>
+                <th>customerAddress1</th>
+                <th>customerAddress2</th>
+                <th>customerPincode</th>
+                <th>emailAddress</th>
+                <th>contactNumber</th>
+                <th>primaryContactPerson</th>
+                <th>activeInactiveFlag</th>
+                
+               
+            </tr>
+        </thead>
+        <tbody>
+            <td><c:out value="${customer.customerCode}"/></td>
+             <td><c:out value="${customer.customerName}"/></td>
+             <td><c:out value="${customer.customerAddress1}"/></td>
+             <td><c:out value="${customer.customerAddress2}"/></td>
+             <td><c:out value="${customer.customerPinCode}"/></td>
+             <td><c:out value="${customer.emailAddress}"/></td>
+             <td><c:out value="${customer.contactNumber}"/></td>
+             <td><c:out value="${customer.primaryContactPerson}"/></td>
+             <td><c:out value="${customer.flag}"/></td>
+        
+        </tbody>
+    </table>
+    </c:forEach>
+</body>
+
+
+
+</html>
+
+
+

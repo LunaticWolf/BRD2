@@ -1,0 +1,126 @@
+
+<html> 
+  <head> 
+    <title> Nav-Bar </title>
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+           <link rel="stylesheet" type="text/css" href="Static.css">
+
+ 
+  </head>
+
+
+<body id="navbackground">
+  <nav  class="navbar navbar-inverse">
+    <div class="container-fluid" >
+      <div class="navbar-header">
+        <a class="navbar-brand active" href="NavBar.html"> N-Data </a>
+      </div>
+    <div> 
+
+      <ul class="nav navbar-nav"> 
+        <li> <a href="CustomerController?theCommand=New"> New </a></li>
+        <li class="dropdown"> 
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> View
+              <span class="caret"></span>
+            </a>        
+            
+                  <ul class="dropdown-menu">
+                        <li> <a href="CustomerController?theCommand=Singleview"> Single record View </a> </li>
+                        <li> <a href="CustomerController?theCommand=Viewall">  Multi - records View </a> </li>
+                    </ul> 
+
+        </li>
+        <li> <a href="CustomerController?theCommand=Update"> Update </a></li>
+        <li> <a href="CustomerController?theCommand=Delete"> Delete </a></li>
+        <ul class="nav navbar-nav navbar-right">
+     
+                       <li><a href="LoginController"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+              </ul>
+    </div>
+  </div>
+
+
+<form action="CrudController?operation=updateContinue" method="post">
+
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p>Update from for the existing user!</p>
+    <hr>
+    <label for="cutomer code"><b>Customer Code*</b></label>
+    <input type="text"  name="customercode" required  value="${customer.customerCode}" readonly/>  <br /> 
+    
+    <label for="cutomer name"><b>Customer Name*</b></label>
+    <input type="text" placeholder="Enter Customer Name" name="customername" required  value="${customer.customerName}" /> <br /> 
+    
+    <label for="address1"><b>Address 1*</b></label>
+    <input type="text" placeholder="Enter Address1" name="address1" required  value="${customer.customerAddress1}" />  <br /> 
+    
+    <label for="address2"><b>Address 2</b></label>
+    <input type="text" placeholder="Enter Address2" name="address2"  value="${customer.customerAddress2}" />  <br />
+    
+    <label for="pincode"><b>Pincode*</b></label>
+    <input type="text" placeholder="Enter Pincode" name="pincode" required  value="${customer.customerPinCode}" />  <br />
+    
+    <label for="email"><b>Email*</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required  value="${customer.emailAddress}" />  <br />
+
+    <label for="contact"><b>Contact Number*</b></label>
+    <input type="text" placeholder="Enter Contact Number" name="contact" required  value="${customer.contactNumber}" />  <br />
+    
+    <label for="contact person"><b>Contact Person*</b></label>
+    <input type="text" placeholder="Enter Contact Person" name="contactperson" required  value="${customer.primaryContactPerson}" />  <br />
+    
+    <label for="status"><b>Status*</b></label> <br>
+    <input type="text" name="status" value="${customer.flag}" />  <br />
+    <%-- <input type="radio" name="status" value="${customer.Flag}"/> <br /> --%>
+    <label for="createdBy"><b>Created By*</b></label>
+    <input type="text" placeholder="Enter Contact Person" name="createdBy" readonly value="${Name}" required>
+    
+     <p>Fields marked with * are mandatory!</p>
+
+   
+    <hr>
+    
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+  
+   
+  </div>
+</form>
+
+
+  
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

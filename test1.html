@@ -1,0 +1,262 @@
+<html> 
+	<head> 
+		<title> 1 - Welcome - Nav-Bar </title>
+
+
+    		<meta charset="utf-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		  	<script type="text/javascript" src="captcha codex.js"></script>
+
+           <link rel="stylesheet" type="text/css" href="Static.css">
+
+
+<style>
+.navbar
+{
+	border-radius: 0px;
+}
+
+
+
+
+
+</style>
+
+ 
+	</head>
+
+	<body id="navbarbackground">
+		 <nav class ="navbar navbar-inverse">
+			  <div class="container-fluid">
+					<div class="navbar-header">
+						   <a class="navbar-brand active" href="#"> N-Data <span class="glyphicon glyphicon-home"></span> </a>
+					</div>
+
+				          <div>			
+							<ul class="nav navbar-nav navbar-right">
+							    <li>
+							    	<a href="LoginController" name="Login" data-target="#LoginModal" data-toggle="modal">
+							    	   <span class="glyphicon glyphicon-log-in"></span> Log-In 
+							    	</a>
+							    </li>     
+
+								<li>
+									<a href="LoginController" name="SignUp" data-target="#SignUpModal" data-toggle="modal">
+										<span class="glyphicon glyphicon-log-in"></span> Sign-Up 
+									</a>
+								</li>
+
+                                
+
+
+
+
+                                 <div class="modal fade" id="SignUpModal">
+                                 	<div class="modal-dialog">
+                                 		<div class="modal-content">
+
+
+<!-- SignUp Modal Content -->
+
+<!-- SignUp Modal head -->		            <div class="modal-header">							    				
+							    				<button class="close" data-dismiss="modal"> <span class="active">&times;</span> </button>
+							    				<h2 class="text-info" title="SignUp"> SignUp </h2>
+    		                   	             </div>
+
+
+
+<!-- SignUp Modal body -->
+
+		                                 		<div class="modal-body">
+
+<!-- form statrs here -->
+		                                 			<form class="form-horizontal" action="NavBar.html">
+														<div class="form-group">
+
+												<br>
+												           
+<!-- SignUpModal - Body - UserID-->												   
+										                      <div class="col-md-12">
+
+												                     	<label class="control-label col-md-2" for="UserID"><span> UserID : 
+												                     	</span></label>
+
+													                    <div class="col-md-8">
+													                     	<input type="text" class="form-control" name="UserID" required/>
+													                   </div>
+													           </div>
+
+
+												<br>
+												<br>
+												<br>            
+<!-- SignUpModal - Body - UserName-->												   
+										                      <div class="col-md-12">
+
+												                     	<label class="control-label col-md-2" for="UserName"><span> Username : 
+												                     	</span></label>
+
+													                    <div class="col-md-8">
+													                     	<input type="text" class="form-control" name="UserName" required/>
+													                   </div>
+													           </div>
+
+
+		                                 		      
+		                                 		<br>
+												<br>
+												<br>            
+<!-- SignUpModal - Body - Password-->												   
+										                      <div class="col-md-12">
+
+												                     	<label class="control-label col-md-2" for="Password"><span> Password : 
+												                     	</span></label>
+
+													                    <div class="col-md-8">
+													                     	<input type="Password" class="form-control" name="Password" required/>
+													                   </div>
+													           </div>
+
+
+
+
+												<br>
+												<br>
+												<br>            
+<!-- SignUpModal - Body - Retype Password-->												   
+										                      <div class="col-md-12">
+
+												                     	<label class="control-label col-md-2" for="Repeat-Password"><span> Re-Type Password : 
+												                     	</span></label>
+
+													                    <div class="col-md-8">
+													                     	<input type="Password" class="form-control" name="Repeat-Password" required/>
+													                   </div>
+													           </div>
+
+
+
+												<br>
+												<br>
+												<br>
+												<br>
+	<!-- LoginModal - Body - CheckBox -->
+
+                                                               
+
+
+															   <div class="col-md-12">
+															   		<label class="control-label col-md-2" for="Role"><span> Role: </span></label>
+
+									                               <div class="col-md-4">
+										                             	<div class="form-check radio-inline">
+																			  <label class="form-check-label">
+
+																			    <input type="radio" class="form-check-input radio-inline" name="Role" required> :Maker
+																			  </label>
+																		</div>
+																		
+
+																		<div class="form-check">
+																			  <label class="form-check-label">												
+																			    <input type="radio" class="form-check-input radio-inline" name="Role" disabled> :Checker
+																			  </label>
+																		</div>
+														    	
+									                                </div>
+													                                 
+															   </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+															 <div class="col-md-12">
+															 	<label class="control-label col-md-2" for="Role"><span> Captcha Code: </span></label>
+															 	
+															 	
+															 		<div class="form-check">
+
+															 			<div class="col-md-4">
+																	  		<input type="text" class="form-control" id="mainCaptcha"/>
+																       	</div>
+															   
+															  			 <div class="col-md-2">
+																	  		<input type="button" class="btn btn-success btn-group"  id="refresh" value="Refresh" onclick="Captcha();" /><br><br>
+															  			 </div> 
+
+															  		</div>
+															    
+															    
+ <br><br> 
+ 	
+ 																<div class="col-md-12">
+ 																	<label class="control-label col-md-2" for="Role"><span> Enter Captcha: </span></label>
+ 																		
+ 																		<div class="form-check">
+ 																		
+	 																		<div class="col-md-4">
+																            	<input type="text" class="form-control" id="txtInput" required /><br>
+																            </div>
+
+																            <div class="col-md-2">
+																            <input id="Button1" type="button" class="btn btn-default btn-primary"  value="Check" onclick="alert(ValidCaptcha());"/>
+																            </div>
+																        </div>
+															
+													        	</div>
+													        </div>
+
+
+
+
+
+
+		                                 		        </div>
+		                                 		   
+		                                 		</div>
+
+
+
+
+
+
+		                                 		<div class="modal-footer">
+		<br>
+		<!-- SignUp Button Action  -->
+		    		                   	             	<div class="col-md-12">
+													    	<div class="col-md-4 col-md-offset-1" >
+													    		<input type="submit" class="form-control" name="SignUp" value="SignUp" />
+													    	</div>
+													    	
+		<!-- Cancel Button Action -->
+															<div class="col-md-4 col-md-offset-2" >
+													    		<input type="submit" class="form-control btn btn-default" data-dismiss="modal" name="Login" value="Cancel" />
+													    	</div>
+
+													    </div>
+		<!--modal footer ends here -->
+		    		                   	             </div>
+		    		                   	         </form>
+
+
+
+                                 	</div>
+
+
+</div>
+</div>
+</ul>
+</div>
+</div>
+</nav>
+</body>
+                               </html>
+
+
